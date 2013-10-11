@@ -1,0 +1,75 @@
+/* ===========================================
+Normalize
+============================================ */
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem;
+}
+.bordered {
+  border: 2px solid #333;
+}
+div,
+header,
+p,
+article,
+footer,
+section,
+pre,
+form,
+fieldset,
+ul,
+ol,
+iframe,
+button,
+img {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem;
+}
+p {
+  padding: 1rem 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: block;
+  margin: 0;
+}
+/* ===========================================
+Theme
+=========================================== */
+body {
+  background: #323232;
+  color: #b2b2b2;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+header,
+footer {
+  background: #792a32;
+  color: #2a7971;
+}
+/* ===========================================
+Classes
+=========================================== */
+.three-quarters {
+  width: 75%;
+  display: inline-block;
+}
+.half {
+  width: 50%;
+  display: inline-block;
+}
+.quarter {
+  width: 25%;
+  display: inline-block;
+}

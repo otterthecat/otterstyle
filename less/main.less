@@ -1,0 +1,93 @@
+@primary_color: rgb(121, 42, 50);
+
+@secondary_color: rgb(42, 121, 113);
+
+@support_color: rgb(50, 50, 50);
+@support_color_light: lighten(@support_color, 50%);
+@support_color_dark: darken(@support_color, 25%);
+
+@error_color: rgb(100, 100, 100);
+
+@alert_color: rgb(150, 150, 150);
+
+@info_color: rgb(125, 125, 125);
+
+
+/* ===========================================
+Normalize
+============================================ */
+
+@padding_default: 1rem;
+
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: @padding_default;
+}
+
+.bordered {
+
+    border: 2px solid #333;
+}
+
+div,header,p,article,footer,section,pre,
+form,fieldset,ul,ol,iframe,button,img {
+
+    .box-sizing;
+}
+
+p {
+    padding: @padding_default 0;
+}
+
+h1, h2, h3, h4, h5 {
+
+    display: block;
+    margin: 0;
+}
+
+
+/* ===========================================
+Theme
+=========================================== */
+
+body {
+
+    background: @support_color;
+    color: @support_color_light;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+
+    background: @primary_color;
+    color: @secondary_color;
+}
+
+
+
+/* ===========================================
+Classes
+=========================================== */
+
+.three-quarters {
+    width: 75%;
+    display: inline-block;
+}
+
+
+.half {
+    width: 50%;
+    display: inline-block;
+}
+
+.quarter {
+    width: 25%;
+    display: inline-block;
+}
