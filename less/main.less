@@ -76,18 +76,22 @@ header, footer {
 Classes
 =========================================== */
 
-.three-quarters {
-    width: 75%;
+.segment(@width: 100%) {
+
+    width: @width;
     display: inline-block;
+    vertical-align: top;
+}
+
+.three-quarters {
+    .segment(75%);
 }
 
 
 .half {
-    width: 50%;
-    display: inline-block;
+    .segment(50%);
 }
 
 .quarter {
-    width: 25%;
-    display: inline-block;
+    .segment(25%);
 }

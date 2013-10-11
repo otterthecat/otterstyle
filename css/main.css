@@ -64,12 +64,15 @@ Classes
 .three-quarters {
   width: 75%;
   display: inline-block;
+  vertical-align: top;
 }
 .half {
   width: 50%;
   display: inline-block;
+  vertical-align: top;
 }
 .quarter {
   width: 25%;
   display: inline-block;
+  vertical-align: top;
 }
