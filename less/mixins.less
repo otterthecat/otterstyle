@@ -1,18 +1,70 @@
 /* ==========================================
+Text
+========================================== */
+
+.text_drop_shadow(@h: 3px, @v: 3px, @blur: 3px, @color: @primary_color_dark){
+
+    -webkit-text-shadow: @h @v @blur @color;
+    -moz-text-shadow: @h @v @blur @color;
+    -ms-text-shadow: @h @v @blur @color;
+    -o-text-shadow: @h @v @blur @color;
+    text-shadow: @h @v @blur @color;
+}
+
+.text_inset(@h: 0px, @v: 1px, @blur: 1px, @color: @primary_color_med_light){
+
+    -webkit-text-shadow: @h @v @blur @color;
+    -moz-text-shadow: @h @v @blur @color;
+    -ms-text-shadow: @h @v @blur @color;
+    -o-text-shadow: @h @v @blur @color;
+    text-shadow: @h @v @blur @color;
+}
+
+/* ==========================================
+Box
+=========================================== */
+.bordered (@width: 2px, @type: solid, @color: @support_color_dark) {
+
+    border: @width @type @color;
+}
+
+/* ==========================================
 Feedback
 ========================================== */
 
-.error-box {
+.feedback_box (@color) {
 
-    background: @error_color;
-    border: 2px solid lighten(@error_color, 30%);
-    color: lighten(@error_color, 30%);
+    background: @color;
+    .bordered(2px, dotted, lighten(@color, 30%));
+    color: lighten(@color, 30%);
+    margin: 0 0 1rem;
 }
 
-.alert-box {
+.error-box {
 
+    .feedback_box(@error_color);
 }
 
 .info-box {
 
+    .feedback_box(@info_color);
+}
+
+.alert-box {
+
+    .feedback_box(@alert_color);
+}
+
+
+/* ==========================================
+Images
+========================================== */
+
+.background_image(@path){
+    background-repeat: no-repeat;
+    background-image: data-uri(@path);
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
 }

@@ -1,6 +1,35 @@
 /* ======================================
 Layout
 ======================================= */
+
+
+/* Navigation ------------------------- */
+.nav-horizontal {
+
+    li {
+        display: inline;
+
+        a {
+            padding: .5rem 1.5rem;
+            font-size: 1.2rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &:first-child a {
+            padding-left: 0;
+        }
+
+        @media only screen and (max-width: 560px) {
+            &:first-child a {
+                padding: .5rem 1.5rem;
+            }
+        }
+    }
+}
+
+/* Blocks ----------------------------- */
 .segment(@width: 100%) {
 
     width: @width;
@@ -15,6 +44,7 @@ Layout
 .two-thirds {
 
     .segment(67%);
+    .background_image('../img/otc.png');
 }
 
 .half {

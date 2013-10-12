@@ -8,22 +8,26 @@ Normalize
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
+    word-wrap: break-word;
     margin: 0;
     padding: @padding_default;
 }
 
-.bordered {
-
-    border: 2px solid #333;
-}
-
-div,header,p,article,footer,section,pre,
+div,header,p,article,aside,nav,hgroup,footer,section,pre,
 form,fieldset,ul,ol,iframe,button,img {
 
     .box-sizing;
 }
 
+img {
+    max-width: 100%;
+    padding: 0;
+}
+
 p {
     padding: @padding_default 0;
+}
+
+ul {
+    padding: 0;
 }
