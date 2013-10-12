@@ -1,0 +1,66 @@
+/* ======================================
+Layout
+======================================= */
+.segment(@width: 100%) {
+
+    width: @width;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.three-quarters {
+    .segment(75%);
+}
+
+.two-thirds {
+
+    .segment(67%);
+}
+
+.half {
+    .segment(50%);
+}
+
+.third {
+    .segment(33%);
+}
+
+.quarter {
+    .segment(25%);
+}
+
+@media only screen and (max-width: 799px) {
+
+    .quarter {
+        .segment(33%);
+    }
+
+    .three-quarters {
+        .segment(67%);
+    }
+}
+
+@media only screen and (max-width: 560px) {
+
+    .half {
+
+        .segment(100%);
+    }
+
+    .quarter, .three-quarters, .third, .two-thirds {
+
+        .segment(50%);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    html {
+        font-size: 110%;
+    }
+
+    .three-quarters, .half, .quarter, .third, .two-thirds {
+
+        .segment(100%);
+    }
+}

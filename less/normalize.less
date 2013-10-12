@@ -1,0 +1,29 @@
+/* =================================
+Normalize
+================================== */
+
+@padding_default: 1rem;
+
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: @padding_default;
+}
+
+.bordered {
+
+    border: 2px solid #333;
+}
+
+div,header,p,article,footer,section,pre,
+form,fieldset,ul,ol,iframe,button,img {
+
+    .box-sizing;
+}
+
+p {
+    padding: @padding_default 0;
+}

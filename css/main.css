@@ -1,6 +1,20 @@
 /* ===========================================
+Imports
+=========================================== */
+/* ===========================================
+Colors
+=========================================== */
+/* ==========================================
+Feedback
+========================================== */
+.error-box {
+  background: #531d22;
+  border: 2px solid #c04955;
+  color: #c04955;
+}
+/* =================================
 Normalize
-============================================ */
+================================== */
 .box-sizing {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -34,6 +48,14 @@ img {
 p {
   padding: 1rem 0;
 }
+/* ====================================
+Typography
+===================================== */
+html {
+  font-size: 105%;
+  font-family: Arial, sans-serif;
+  line-height: 1.3rem;
+}
 h1,
 h2,
 h3,
@@ -41,6 +63,94 @@ h4,
 h5 {
   display: block;
   margin: 0;
+  line-height: 2rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1.15rem;
+}
+/* ======================================
+Layout
+======================================= */
+.three-quarters {
+  width: 75%;
+  display: inline-block;
+  vertical-align: top;
+}
+.two-thirds {
+  width: 67%;
+  display: inline-block;
+  vertical-align: top;
+}
+.half {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.third {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top;
+}
+.quarter {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+@media only screen and (max-width: 799px) {
+  .quarter {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .three-quarters {
+    width: 67%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .half {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .quarter,
+  .three-quarters,
+  .third,
+  .two-thirds {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 110%;
+  }
+  .three-quarters,
+  .half,
+  .quarter,
+  .third,
+  .two-thirds {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 /* ===========================================
 Theme
@@ -50,29 +160,9 @@ body {
   color: #b2b2b2;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
 }
 header,
 footer {
   background: #792a32;
   color: #2a7971;
-}
-/* ===========================================
-Classes
-=========================================== */
-.three-quarters {
-  width: 75%;
-  display: inline-block;
-  vertical-align: top;
-}
-.half {
-  width: 50%;
-  display: inline-block;
-  vertical-align: top;
-}
-.quarter {
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
 }
