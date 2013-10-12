@@ -5,7 +5,47 @@ Imports
 @import "mixins";
 @import "normalize";
 @import "typography";
-@import "layout";
+// @import "layout";
+
+nav {
+    padding: 0;
+
+    ul {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        li {
+            border-bottom: 1px dotted @support_color_dark;
+            text-align: center;
+
+            &:hover {
+                background-color: @support_color_light;
+            }
+
+            a {
+                display: block;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+label[for="menuToggle"]{
+
+    display: block;
+    font-size: 3rem;
+    &:before {
+        content: "\2261";
+    }
+}
+
+input[type='checkbox']{
+    position: absolute;
+    visibility: hidden;
+    &:checked ~ ul {
+        display: block;
+    }
+}
 
 /* ===========================================
 Theme
