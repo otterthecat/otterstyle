@@ -72,14 +72,17 @@ img {
   box-sizing: border-box;
   word-wrap: break-word;
   margin: 0;
-  padding: 1rem 0;
+  padding: 0 0;
 }
 img {
   max-width: 100%;
   padding: 0;
 }
-p {
-  padding: 1rem 0;
+header,
+footer,
+p,
+div {
+  padding: 1rem;
 }
 ul {
   padding: 0;
@@ -239,20 +242,6 @@ a[href^="http://"]:after {
 .icon-mail:before {
   content: "\e015";
 }
-.device-mode {
-  font-size: 1.7rem;
-  float: right;
-}
-.device-mode:before {
-  content: "\e013";
-}
-.device-mode:after {
-  content: ".";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
 /* ======================================
 Layout
 ======================================= */
@@ -299,6 +288,10 @@ input[type='checkbox'] {
 input[type='checkbox']:checked ~ ul {
   display: block;
 }
+input[type='checkbox']:checked ~ label {
+  color: #000000;
+  background-color: #b2b2b2;
+}
 /* Blocks ----------------------------- */
 .three-quarters,
 .half,
@@ -308,6 +301,21 @@ input[type='checkbox']:checked ~ ul {
   width: 100%;
   display: inline-block;
   vertical-align: top;
+}
+/* Device DIsplay -------------------- */
+.device-mode {
+  font-size: 1.7rem;
+  float: right;
+}
+.device-mode:before {
+  content: "\e013";
+}
+.device-mode:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 /* ===============================================
 Media Queries
@@ -342,6 +350,9 @@ Media Queries
     word-wrap: break-word;
     margin: 0;
     padding: 1rem 1rem;
+  }
+  p {
+    padding: 1rem 0;
   }
   .nav-horizontal label[for="menuToggle"] {
     display: none;
@@ -381,7 +392,30 @@ Media Queries
 }
 @media only screen and (min-width: 800px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
+  }
+  div,
+  header,
+  article,
+  aside,
+  nav,
+  hgroup,
+  footer,
+  section,
+  pre,
+  form,
+  fieldset,
+  ul,
+  ol,
+  iframe,
+  button,
+  img {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 1rem 1rem;
   }
   .quarter {
     width: 25%;

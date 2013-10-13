@@ -44,6 +44,10 @@ input[type='checkbox']{
     &:checked ~ ul {
         display: block;
     }
+    &:checked ~ label {
+        color: @support_color_dark;
+        background-color: @support_color_light;
+    }
 }
 
 
@@ -58,4 +62,23 @@ input[type='checkbox']{
 .three-quarters, .half, .quarter, .third, .two-thirds {
 
     .segment(100%);
+}
+
+/* Device DIsplay -------------------- */
+.device-mode {
+    font-size: 1.7rem;
+    float: right;
+
+    &:before {
+        content: "\e013";
+    }
+
+    &:after {
+
+       content: ".";
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+    }
 }

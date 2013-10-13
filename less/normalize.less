@@ -21,7 +21,7 @@ body {
 div,header,p,article,aside,nav,hgroup,footer,section,pre,
 form,fieldset,ul,ol,iframe,button,img {
 
-    .box-sizing();
+    .box-sizing(0);
 }
 
 img {
@@ -29,8 +29,8 @@ img {
     padding: 0;
 }
 
-p {
-    padding: @padding_default 0;
+header,footer, p, div {
+    padding: @padding_default;
 }
 
 ul {

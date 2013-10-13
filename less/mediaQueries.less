@@ -18,6 +18,10 @@ form,fieldset,ul,ol,iframe,button,img {
     .box-sizing(1rem, 1rem);
 }
 
+p {
+    padding: @padding_default 0;
+}
+
 .nav-horizontal {
 
     label[for="menuToggle"]{
@@ -66,7 +70,13 @@ form,fieldset,ul,ol,iframe,button,img {
 @media only screen and (min-width: 800px) {
 
     html {
-        font-size: 80%;
+        font-size: 90%;
+    }
+
+    div,header,article,aside,nav,hgroup,footer,section,pre,
+    form,fieldset,ul,ol,iframe,button,img {
+
+        .box-sizing(1rem, 1rem);
     }
 
     .quarter {
