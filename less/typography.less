@@ -2,9 +2,36 @@
 Typography
 ===================================== */
 
+@font-face {
+    font-family: 'icomoon';
+    src:url('../icomoon/fonts/icomoon.eot');
+    src:url('../icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('../icomoon/fonts/icomoon.woff') format('woff'),
+        url('../icomoon/fonts/icomoon.ttf') format('truetype'),
+        url('../icomoon/fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-html5, .icon-css3, .icon-chrome, .icon-firefox, .icon-IE,
+.icon-opera, .icon-safari, .icon-twitter, .icon-tux, .icon-linkedin,
+.icon-skype, .icon-github, .icon-feed, .icon-spam, .icon-warning,
+.icon-info, .icon-new-tab, .icon-menu, .icon-screen, .icon-mobile,
+.icon-tablet, .icon-mail, .error-box:before, .device-mode, .alert-box:before, .info-box:before, a[href^="http://"]:after {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+
 html {
 
-    font-size: 108%;
+    font-size: 105%;
     font-family: Arial, sans-serif;
     line-height: 1.5rem;
 }
@@ -16,22 +43,114 @@ h1, h2, h3, h4, h5 {
     line-height: 2rem;
 }
 
-h1 {font-size: 2rem;}
+h1 {font-size: 1.7rem;}
 
-h2 {font-size: 1.8rem;}
+h2 {font-size: 1.6rem;}
 
-h3 {font-size: 1.6rem;}
+h3 {font-size: 1.5rem;}
 
 h4 {font-size: 1.4rem;}
 
-h5 {font-size: 1.2rem;}
+h5 {font-size: 1.3rem;}
 
-h6 {font-size: 1.15rem;}
+h6 {font-size: 1.2rem;}
 
 a {
     color: @secondary_color;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    // show external icon for external links
+    &[href^="http://"]:after {
+        content: " \e010";
+    }
 }
 
-nav a {
-    text-decoration: none;
+/* Icons ---------------------------------- */
+.icon-html5:before {
+    content: "\e000";
+}
+.icon-css3:before {
+    content: "\e001";
+}
+.icon-chrome:before {
+    content: "\e002";
+}
+.icon-firefox:before {
+    content: "\e003";
+}
+.icon-IE:before {
+    content: "\e004";
+}
+.icon-opera:before {
+    content: "\e005";
+}
+.icon-safari:before {
+    content: "\e006";
+}
+.icon-twitter:before {
+    content: "\e007";
+}
+.icon-tux:before {
+    content: "\e008";
+}
+.icon-linkedin:before {
+    content: "\e009";
+}
+.icon-skype:before {
+    content: "\e00a";
+}
+.icon-github:before {
+    content: "\e00b";
+}
+.icon-feed:before {
+    content: "\e00c";
+}
+.icon-spam:before {
+    content: "\e00d";
+}
+.icon-warning:before {
+    content: "\e00e";
+}
+.icon-info:before {
+    content: "\e00f";
+}
+.icon-new-tab:before {
+    content: "\e010";
+}
+.icon-menu:before {
+    content: "\e011";
+}
+.icon-screen:before {
+    content: "\e012";
+}
+.icon-mobile:before {
+    content: "\e013";
+}
+.icon-tablet:before {
+    content: "\e014";
+}
+.icon-mail:before {
+    content: "\e015";
+}
+
+.device-mode {
+    font-size: 1.7rem;
+    float: right;
+
+    &:before {
+        content: "\e013";
+    }
+
+    &:after {
+
+       content: ".";
+       visibility: hidden;
+       display: block;
+       height: 0;
+       clear: both;
+    }
 }

@@ -2,19 +2,20 @@
 <html>
     <head>
         <title>CSS</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
 
         <header>
+            <span class="device-mode"></span>
             <h1>My Title</h1>
             <h2>with sub title</h2>
         </header>
         <nav class="nav-horizontal">
 
             <input type="checkbox" id="menuToggle" name="menuToggle"/>
-            <label onclick="" for="menuToggle"></label>
+            <label onclick="" for="menuToggle" class="icon-menu"></label>
             <ul>
                 <li><a href="">item 1</a></li>
                 <li><a href="">item 2</a></li>
@@ -27,7 +28,7 @@
             <header>
                 <h1>Article Title</h1>
             </header>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, aliquam unde id consequatur facilis modi est. Nulla, aspernatur esse cum voluptas repellendus! Suscipit, nihil, praesentium nesciunt placeat temporibus mollitia adipisci!</p>
+                <p>Lorem ipsum <a href="http://google.com">dolor sit amet</a>, consectetur adipisicing elit. Aspernatur, aliquam unde id consequatur facilis modi est. Nulla, aspernatur esse cum voluptas repellendus! Suscipit, nihil, praesentium nesciunt placeat temporibus mollitia adipisci!</p>
                 <div class="alert-box">
                     This is an alert display
                 </div>
@@ -69,7 +70,12 @@
         </article>
 
         <footer>
-            &copy; 2013 my stuff
+            <aside class="colophon">
+                <span class="icon-html5"></span>
+                <span class="icon-css3"></span>
+                <span class="icon-tux"></span>
+                &copy; 2013 my stuff
+            </aside>
         </footer>
     </body>
 </html>

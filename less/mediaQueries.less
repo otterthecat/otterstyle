@@ -5,7 +5,11 @@ Media Queries
 @media only screen and (min-width: 561px) {
 
 html {
-    font-size: 105%;
+    font-size: 90%;
+}
+
+.device-mode:before {
+    content: "\e014";
 }
 
 div,header,p,article,aside,nav,hgroup,footer,section,pre,
@@ -61,6 +65,10 @@ form,fieldset,ul,ol,iframe,button,img {
 
 @media only screen and (min-width: 800px) {
 
+    html {
+        font-size: 80%;
+    }
+
     .quarter {
         .segment(25%);
     }
@@ -71,5 +79,9 @@ form,fieldset,ul,ol,iframe,button,img {
 
     .half {
         .segment(50%);
+    }
+
+    .device-mode:before {
+        content: "\e012";
     }
 }

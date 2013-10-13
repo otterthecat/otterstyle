@@ -41,17 +41,23 @@ Feedback
 }
 
 .error-box {
-
+    &:before {
+        content: "\e00d";
+    }
     .feedback_box(@error_color);
 }
 
 .info-box {
-
+    &:before {
+        content: "\e00f";
+    }
     .feedback_box(@info_color);
 }
 
 .alert-box {
-
+    &:before {
+        content: "\e00e";
+    }
     .feedback_box(@alert_color);
 }
 
