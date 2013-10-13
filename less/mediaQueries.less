@@ -1,0 +1,84 @@
+/* ===============================================
+Media Queries
+=============================================== */
+// @media only screen and (min-width: 280px) {
+
+//     .half {
+
+//         .segment(100%);
+//     }
+
+//     .quarter, .three-quarters, .third, .two-thirds {
+
+//         .segment(50%);
+//     }
+// }
+
+
+@media only screen and (min-width: 561px) {
+
+div,header,p,article,aside,nav,hgroup,footer,section,pre,
+form,fieldset,ul,ol,iframe,button,img {
+
+    .box-sizing(1rem, 1rem);
+}
+
+.nav-horizontal {
+
+    label[for="menuToggle"]{
+        display: none;
+    }
+
+    input[type='checkbox']{
+        display: none;
+    }
+
+    ul {
+        display: block;
+    }
+
+
+    li {
+        display: inline-block;
+        border: none;
+
+        a {
+            padding: .5rem 1.5rem;
+            font-size: 1.2rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &:first-child a {
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+    .quarter, .third {
+        .segment(33%);
+    }
+
+    .two-thirds, .three-quarters {
+        .segment(67%);
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    .quarter {
+        .segment(25%);
+    }
+
+    .three-quarters {
+        .segment(75%);
+    }
+
+    .half {
+        .segment(50%);
+    }
+}

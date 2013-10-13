@@ -37,14 +37,6 @@ Images
 /* =================================
 Normalize
 ================================== */
-.box-sizing {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin: 0;
-  padding: 1rem;
-}
 div,
 header,
 p,
@@ -67,7 +59,7 @@ img {
   box-sizing: border-box;
   word-wrap: break-word;
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 img {
   max-width: 100%;
@@ -120,6 +112,10 @@ a {
 nav a {
   text-decoration: none;
 }
+/* ======================================
+Layout
+======================================= */
+/* Navigation ------------------------- */
 nav {
   padding: 0;
 }
@@ -139,6 +135,18 @@ nav ul li a {
   display: block;
   padding: 1rem 0;
 }
+/* Advanced (Android) Checkbox Hack */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+  to {
+    padding: 0;
+  }
+}
 label[for="menuToggle"] {
   display: block;
   font-size: 3rem;
@@ -152,6 +160,100 @@ input[type='checkbox'] {
 }
 input[type='checkbox']:checked ~ ul {
   display: block;
+}
+/* Blocks ----------------------------- */
+html {
+  font-size: 110%;
+}
+.three-quarters,
+.half,
+.quarter,
+.third,
+.two-thirds {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+/* ===============================================
+Media Queries
+=============================================== */
+@media only screen and (min-width: 561px) {
+  div,
+  header,
+  p,
+  article,
+  aside,
+  nav,
+  hgroup,
+  footer,
+  section,
+  pre,
+  form,
+  fieldset,
+  ul,
+  ol,
+  iframe,
+  button,
+  img {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 1rem 1rem;
+  }
+  .nav-horizontal label[for="menuToggle"] {
+    display: none;
+  }
+  .nav-horizontal input[type='checkbox'] {
+    display: none;
+  }
+  .nav-horizontal ul {
+    display: block;
+  }
+  .nav-horizontal li {
+    display: inline-block;
+    border: none;
+  }
+  .nav-horizontal li a {
+    padding: .5rem 1.5rem;
+    font-size: 1.2rem;
+  }
+  .nav-horizontal li a:hover {
+    text-decoration: underline;
+  }
+  .nav-horizontal li:first-child a {
+    padding-left: 0;
+  }
+  .quarter,
+  .third {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .two-thirds,
+  .three-quarters {
+    width: 67%;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .quarter {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .three-quarters {
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .half {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 /* ===========================================
 Theme

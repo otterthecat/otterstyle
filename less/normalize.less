@@ -4,19 +4,19 @@ Normalize
 
 @padding_default: 1rem;
 
-.box-sizing {
+.box-sizing (@vert: 1rem, @horiz: 0) {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     word-wrap: break-word;
     margin: 0;
-    padding: @padding_default;
+    padding: @vert @horiz;
 }
 
 div,header,p,article,aside,nav,hgroup,footer,section,pre,
 form,fieldset,ul,ol,iframe,button,img {
 
-    .box-sizing;
+    .box-sizing();
 }
 
 img {

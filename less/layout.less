@@ -4,30 +4,51 @@ Layout
 
 
 /* Navigation ------------------------- */
-.nav-horizontal {
 
-    li {
-        display: inline;
+nav {
+    padding: 0;
 
-        a {
-            padding: .5rem 1.5rem;
-            font-size: 1.2rem;
+    ul {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        li {
+            border-bottom: 1px dotted @support_color_dark;
+            text-align: center;
+
             &:hover {
-                text-decoration: underline;
+                background-color: @support_color_light;
             }
-        }
 
-        &:first-child a {
-            padding-left: 0;
-        }
-
-        @media only screen and (max-width: 560px) {
-            &:first-child a {
-                padding: .5rem 1.5rem;
+            a {
+                display: block;
+                padding: 1rem 0;
             }
         }
     }
 }
+
+/* Advanced (Android) Checkbox Hack */
+body { -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+label[for="menuToggle"]{
+
+    display: block;
+    font-size: 3rem;
+    &:before {
+        content: "\2261";
+    }
+}
+
+input[type='checkbox']{
+    position: absolute;
+    visibility: hidden;
+    &:checked ~ ul {
+        display: block;
+    }
+}
+
 
 /* Blocks ----------------------------- */
 .segment(@width: 100%) {
@@ -37,60 +58,11 @@ Layout
     vertical-align: top;
 }
 
-.three-quarters {
-    .segment(75%);
+html {
+    font-size: 110%;
 }
 
-.two-thirds {
+.three-quarters, .half, .quarter, .third, .two-thirds {
 
-    .segment(67%);
-    .background_image('../img/otc.png');
-}
-
-.half {
-    .segment(50%);
-}
-
-.third {
-    .segment(33%);
-}
-
-.quarter {
-    .segment(25%);
-}
-
-@media only screen and (max-width: 799px) {
-
-    .quarter {
-        .segment(33%);
-    }
-
-    .three-quarters {
-        .segment(67%);
-    }
-}
-
-@media only screen and (max-width: 560px) {
-
-    .half {
-
-        .segment(100%);
-    }
-
-    .quarter, .three-quarters, .third, .two-thirds {
-
-        .segment(50%);
-    }
-}
-
-@media only screen and (max-width: 480px) {
-
-    html {
-        font-size: 110%;
-    }
-
-    .three-quarters, .half, .quarter, .third, .two-thirds {
-
-        .segment(100%);
-    }
+    .segment(100%);
 }
