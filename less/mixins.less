@@ -11,7 +11,7 @@ Text
     text-shadow: @h @v @blur @color;
 }
 
-.text_inset(@h: 0px, @v: 1px, @blur: 1px, @color: @primary_color_med_light){
+.text_inset(@h: 0px, @v: 1px, @blur: 1px, @color: @primary_color_light){
 
     -webkit-text-shadow: @h @v @blur @color;
     -moz-text-shadow: @h @v @blur @color;
@@ -33,7 +33,7 @@ Feedback
 ========================================== */
 
 .feedback_box (@color) {
-
+    .text_drop_shadow();
     background: @color;
     .bordered(2px, dotted, lighten(@color, 30%));
     color: lighten(@color, 30%);

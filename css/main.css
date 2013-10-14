@@ -14,6 +14,11 @@ Box
 Feedback
 ========================================== */
 .error-box {
+  -webkit-text-shadow: 3px 3px 3px #2d1013;
+  -moz-text-shadow: 3px 3px 3px #2d1013;
+  -ms-text-shadow: 3px 3px 3px #2d1013;
+  -o-text-shadow: 3px 3px 3px #2d1013;
+  text-shadow: 3px 3px 3px #2d1013;
   background: #531d22;
   border: 2px dotted #c04955;
   color: #c04955;
@@ -23,6 +28,11 @@ Feedback
   content: "\e00d";
 }
 .info-box {
+  -webkit-text-shadow: 3px 3px 3px #2d1013;
+  -moz-text-shadow: 3px 3px 3px #2d1013;
+  -ms-text-shadow: 3px 3px 3px #2d1013;
+  -o-text-shadow: 3px 3px 3px #2d1013;
+  text-shadow: 3px 3px 3px #2d1013;
   background: #1d534e;
   border: 2px dotted #49c0b4;
   color: #49c0b4;
@@ -32,6 +42,11 @@ Feedback
   content: "\e00f";
 }
 .alert-box {
+  -webkit-text-shadow: 3px 3px 3px #2d1013;
+  -moz-text-shadow: 3px 3px 3px #2d1013;
+  -ms-text-shadow: 3px 3px 3px #2d1013;
+  -o-text-shadow: 3px 3px 3px #2d1013;
+  text-shadow: 3px 3px 3px #2d1013;
   background: #aa9632;
   border: 2px dotted #e0d395;
   color: #e0d395;
@@ -46,7 +61,9 @@ Images
 /* =================================
 Normalize
 ================================== */
-body {
+body,
+ul,
+img {
   margin: 0;
   padding: 0;
 }
@@ -66,7 +83,13 @@ ul,
 ol,
 iframe,
 button,
-img {
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -74,18 +97,14 @@ img {
   margin: 0;
   padding: 0 0;
 }
-img {
-  max-width: 100%;
-  padding: 0;
-}
 header,
 footer,
 p,
 div {
   padding: 1rem;
 }
-ul {
-  padding: 0;
+img {
+  max-width: 100%;
 }
 /* ====================================
 Typography
@@ -144,7 +163,6 @@ h3,
 h4,
 h5 {
   display: block;
-  margin: 0;
   line-height: 2rem;
 }
 h1 {
@@ -246,13 +264,9 @@ a[href^="http://"]:after {
 Layout
 ======================================= */
 /* Navigation ------------------------- */
-nav {
-  padding: 0;
-}
 nav ul {
   display: none;
   list-style-type: none;
-  padding: 0;
 }
 nav ul li {
   border-bottom: 1px dotted #000000;
@@ -339,11 +353,8 @@ Media Queries
   pre,
   form,
   fieldset,
-  ul,
-  ol,
   iframe,
-  button,
-  img {
+  button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -405,11 +416,8 @@ Media Queries
   pre,
   form,
   fieldset,
-  ul,
-  ol,
   iframe,
-  button,
-  img {
+  button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;

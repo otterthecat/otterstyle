@@ -13,26 +13,21 @@ Normalize
     padding: @vert @horiz;
 }
 
-body {
+body, ul, img {
     margin: 0;
     padding: 0;
 }
 
 div,header,p,article,aside,nav,hgroup,footer,section,pre,
-form,fieldset,ul,ol,iframe,button,img {
+form,fieldset,ul,ol,iframe,button,img,h1,h2,h3,h4,h5,h6 {
 
     .box-sizing(0);
-}
-
-img {
-    max-width: 100%;
-    padding: 0;
 }
 
 header,footer, p, div {
     padding: @padding_default;
 }
 
-ul {
-    padding: 0;
+img {
+    max-width: 100%;
 }
