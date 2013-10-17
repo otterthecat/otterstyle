@@ -4,8 +4,10 @@ Media Queries
 
 @media only screen and (min-width: 561px) {
 
-html {
-    font-size: 90%;
+body {
+
+    font-size: 1.6rem;
+    line-height: 2rem;
 }
 
 .device-mode:before {
@@ -24,38 +26,33 @@ p {
 
 .nav-horizontal {
 
-    label[for="menuToggle"]{
-        display: none;
-    }
-
-    input[type='checkbox']{
+    label[for="menuToggle"],
+    input[type="checkbox"]{
         display: none;
     }
 
     ul {
+
         display: block;
-    }
 
+        li {
+            display: inline-block;
+            border: none;
 
-    li {
-        display: inline-block;
-        border: none;
-
-        a {
-            padding: .5rem 1.5rem;
-            font-size: 1.2rem;
-            &:hover {
-                text-decoration: underline;
+            a {
+                padding: .5rem 1.5rem;
+                font-size: 1.2rem;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
-        }
 
-        &:first-child a {
-            padding-left: 0;
+            &:first-child a {
+                padding-left: 0;
+            }
         }
     }
 }
-
-
 
     .quarter, .third {
         .segment(33%);
@@ -68,10 +65,6 @@ p {
 
 
 @media only screen and (min-width: 800px) {
-
-    html {
-        font-size: 90%;
-    }
 
     div,header,article,aside,nav,hgroup,footer,section,pre,
     form,fieldset,iframe,button {

@@ -10,6 +10,28 @@ Text
 /* ==========================================
 Box
 =========================================== */
+.img-left {
+  float: left;
+  margin: .2rem 1rem 0 0;
+}
+.img-left:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.img-right {
+  float: right;
+  margin: .2rem 0 0 .1rem;
+}
+.img-right:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
 /* ==========================================
 Feedback
 ========================================== */
@@ -95,6 +117,7 @@ h6 {
   box-sizing: border-box;
   word-wrap: break-word;
   margin: 0;
+  clear: both;
   padding: 0 0;
 }
 header,
@@ -153,9 +176,12 @@ a[href^="http://"]:after {
   -webkit-font-smoothing: antialiased;
 }
 html {
-  font-size: 105%;
+  font-size: 62.5%;
   font-family: Arial, sans-serif;
-  line-height: 1.5rem;
+}
+body {
+  font-size: 1.8rem;
+  line-height: 2rem;
 }
 h1,
 h2,
@@ -264,22 +290,37 @@ a[href^="http://"]:after {
 Layout
 ======================================= */
 /* Navigation ------------------------- */
-nav ul {
+.nav-horizontal ul {
   display: none;
   list-style-type: none;
 }
-nav ul li {
+.nav-horizontal ul li {
   border-bottom: 1px dotted #000000;
   text-align: center;
 }
-nav ul li:hover {
+.nav-horizontal ul li:hover {
   background-color: #b2b2b2;
 }
-nav ul li a {
+.nav-horizontal ul li a {
   display: block;
   padding: 1rem 0;
 }
-/* Advanced (Android) Checkbox Hack */
+.nav-horizontal label[for="menuToggle"] {
+  display: block;
+  font-size: 2rem;
+}
+.nav-horizontal input[type='checkbox'] {
+  position: absolute;
+  visibility: hidden;
+}
+.nav-horizontal input[type='checkbox']:checked ~ ul {
+  display: block;
+}
+.nav-horizontal input[type='checkbox']:checked ~ label {
+  color: #000000;
+  background-color: #b2b2b2;
+}
+/* Android Checkbox Hack */
 body {
   -webkit-animation: bugfix infinite 1s;
 }
@@ -291,21 +332,7 @@ body {
     padding: 0;
   }
 }
-label[for="menuToggle"] {
-  display: block;
-  font-size: 2rem;
-}
-input[type='checkbox'] {
-  position: absolute;
-  visibility: hidden;
-}
-input[type='checkbox']:checked ~ ul {
-  display: block;
-}
-input[type='checkbox']:checked ~ label {
-  color: #000000;
-  background-color: #b2b2b2;
-}
+/* end Android hack */
 /* Blocks ----------------------------- */
 .three-quarters,
 .half,
@@ -324,7 +351,7 @@ input[type='checkbox']:checked ~ label {
 .device-mode:before {
   content: "\e013";
 }
-.device-mode:after {
+.device-mode:after:after {
   content: ".";
   visibility: hidden;
   display: block;
@@ -335,8 +362,9 @@ input[type='checkbox']:checked ~ label {
 Media Queries
 =============================================== */
 @media only screen and (min-width: 561px) {
-  html {
-    font-size: 90%;
+  body {
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
   .device-mode:before {
     content: "\e014";
@@ -360,32 +388,31 @@ Media Queries
     box-sizing: border-box;
     word-wrap: break-word;
     margin: 0;
+    clear: both;
     padding: 1rem 1rem;
   }
   p {
     padding: 1rem 0;
   }
-  .nav-horizontal label[for="menuToggle"] {
-    display: none;
-  }
-  .nav-horizontal input[type='checkbox'] {
+  .nav-horizontal label[for="menuToggle"],
+  .nav-horizontal input[type="checkbox"] {
     display: none;
   }
   .nav-horizontal ul {
     display: block;
   }
-  .nav-horizontal li {
+  .nav-horizontal ul li {
     display: inline-block;
     border: none;
   }
-  .nav-horizontal li a {
+  .nav-horizontal ul li a {
     padding: .5rem 1.5rem;
     font-size: 1.2rem;
   }
-  .nav-horizontal li a:hover {
+  .nav-horizontal ul li a:hover {
     text-decoration: underline;
   }
-  .nav-horizontal li:first-child a {
+  .nav-horizontal ul li:first-child a {
     padding-left: 0;
   }
   .quarter,
@@ -402,9 +429,6 @@ Media Queries
   }
 }
 @media only screen and (min-width: 800px) {
-  html {
-    font-size: 90%;
-  }
   div,
   header,
   article,
@@ -423,6 +447,7 @@ Media Queries
     box-sizing: border-box;
     word-wrap: break-word;
     margin: 0;
+    clear: both;
     padding: 1rem 1rem;
   }
   .quarter {

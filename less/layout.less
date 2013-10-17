@@ -5,7 +5,7 @@ Layout
 
 /* Navigation ------------------------- */
 
-nav {
+.nav-horizontal {
 
     ul {
         display: none;
@@ -25,39 +25,36 @@ nav {
             }
         }
     }
+
+    label[for="menuToggle"]{
+
+        display: block;
+        font-size: 2rem;
+    }
+
+    input[type='checkbox']{
+
+        position: absolute;
+        visibility: hidden;
+
+        &:checked ~ ul {
+            display: block;
+        }
+
+        &:checked ~ label {
+            color: @support_color_dark;
+            background-color: @support_color_light;
+        }
+    }
 }
 
-/* Advanced (Android) Checkbox Hack */
+/* Android Checkbox Hack */
 body { -webkit-animation: bugfix infinite 1s; }
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
-
-label[for="menuToggle"]{
-
-    display: block;
-    font-size: 2rem;
-}
-
-input[type='checkbox']{
-    position: absolute;
-    visibility: hidden;
-    &:checked ~ ul {
-        display: block;
-    }
-    &:checked ~ label {
-        color: @support_color_dark;
-        background-color: @support_color_light;
-    }
-}
+/* end Android hack */
 
 
 /* Blocks ----------------------------- */
-.segment(@width: 100%) {
-
-    width: @width;
-    display: inline-block;
-    vertical-align: top;
-}
-
 .three-quarters, .half, .quarter, .third, .two-thirds {
 
     .segment(100%);
@@ -65,6 +62,7 @@ input[type='checkbox']{
 
 /* Device DIsplay -------------------- */
 .device-mode {
+
     font-size: 1.7rem;
     float: right;
 
@@ -74,10 +72,6 @@ input[type='checkbox']{
 
     &:after {
 
-       content: ".";
-       visibility: hidden;
-       display: block;
-       height: 0;
-       clear: both;
+        .clear_float();
     }
 }
