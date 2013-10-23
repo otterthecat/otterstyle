@@ -1,0 +1,23 @@
+@-webkit-keyframes rise {
+    from {opacity: 1;  -webkit-transform: translateY(0);}
+    to {opacity: 0;  -webkit-transform: translateY(-50px);}
+}
+@-o-keyframes rise {
+    from {  }
+    to {  }
+}
+@-moz-keyframes rise {
+    from { opacity: 1; -moz-transform: translateY(0); }
+    to { opacity: 0; -moz-transform: translateY(-50px); }
+}
+@keyframes rise {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-50px);  }
+}
+
+.rise {
+    -webkit-animation: rise 0.5s forwards;
+    -moz-animation: rise 0.5s forwards;
+    -o-animation: rise 0.5s forwards;
+    animation: rise 0.5s forwards;
+}
