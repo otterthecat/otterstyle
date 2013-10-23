@@ -181,7 +181,7 @@ html {
 }
 body {
   font-size: 1.8rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
 }
 h1,
 h2,
@@ -192,22 +192,28 @@ h5 {
   line-height: 2rem;
 }
 h1 {
-  font-size: 1.7rem;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
 }
 h2 {
-  font-size: 1.6rem;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
 }
 h4 {
-  font-size: 1.4rem;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
 }
 h5 {
-  font-size: 1.3rem;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
 }
 h6 {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
 }
 a {
   color: #2a7971;
@@ -307,7 +313,8 @@ Layout
 }
 .nav-horizontal label[for="menuToggle"] {
   display: block;
-  font-size: 2rem;
+  font-size: 3.4rem;
+  padding-bottom: 2px;
 }
 .nav-horizontal input[type='checkbox'] {
   position: absolute;
@@ -345,7 +352,7 @@ body {
 }
 /* Device DIsplay -------------------- */
 .device-mode {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
   float: right;
 }
 .device-mode:before {
@@ -364,7 +371,7 @@ Media Queries
 @media only screen and (min-width: 561px) {
   body {
     font-size: 1.6rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
   }
   .device-mode:before {
     content: "\e014";
@@ -394,6 +401,9 @@ Media Queries
   p {
     padding: 1rem 0;
   }
+  .nav-horizontal {
+    font-size: 1.7rem;
+  }
   .nav-horizontal label[for="menuToggle"],
   .nav-horizontal input[type="checkbox"] {
     display: none;
@@ -407,7 +417,6 @@ Media Queries
   }
   .nav-horizontal ul li a {
     padding: .5rem 1.5rem;
-    font-size: 1.2rem;
   }
   .nav-horizontal ul li a:hover {
     text-decoration: underline;
