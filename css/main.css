@@ -426,13 +426,13 @@ Media Queries
   }
   .quarter,
   .third {
-    width: 33%;
+    width: 50%;
     display: inline-block;
     vertical-align: top;
   }
   .two-thirds,
   .three-quarters {
-    width: 67%;
+    width: 50%;
     display: inline-block;
     vertical-align: top;
   }
@@ -492,7 +492,6 @@ Animations
   }
 }
 @-o-keyframes rise {
-  
 }
 @-moz-keyframes rise {
   from {
@@ -531,7 +530,6 @@ Animations
   }
 }
 @-o-keyframes drop {
-  
 }
 @-moz-keyframes drop {
   from {
@@ -568,7 +566,6 @@ Animations
   }
 }
 @-o-keyframes rotate360 {
-  
 }
 @-moz-keyframes rotate360 {
   from {
