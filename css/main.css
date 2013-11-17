@@ -430,6 +430,11 @@ Media Queries
     display: inline-block;
     vertical-align: top;
   }
+  .third:nth-of-type(3n) {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
   .two-thirds,
   .three-quarters {
     width: 50%;
@@ -466,6 +471,21 @@ Media Queries
   }
   .three-quarters {
     width: 75%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .third:nth-of-type(2n+1) {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .third:nth-of-type(2n) {
+    width: 34%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .two-thirds {
+    width: 67%;
     display: inline-block;
     vertical-align: top;
   }
