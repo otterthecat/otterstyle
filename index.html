@@ -1,12 +1,22 @@
 <!doctype html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>CSS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-
+        <!-- [if lte IE 8]>
+            <div class="ie-public-shaming">
+                <h1>You are using an outdated version of Internet Explorer</h1>
+                <p>
+                    This site is not optimized for your browser. It is strongly recommended
+                    that you <a href="http://browsehappy.com">download a superior alternative</a>.
+                    You'll thank us later.
+                </p>
+            </div>
+        <![endif] -->
         <header class="main-header">
             <span class="device-mode"></span>
             <h1>My Title</h1>
@@ -91,22 +101,31 @@
         <form action="">
             <fieldset>
                 <legend>The Form</legend>
-                <label for=""><input type="text"></label>
+                <label for=""><input type="text" placeholder="Enter text here"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Checkboxes</legend>
+                <input name="cb" id="c1" value="1" type="checkbox"/><label for="c1" >Label Text</label>
+                <input name="cb" id="c2" value="2" type="checkbox"><label for="c2">Lt2</label>
+                <input name="cb" id="c3" value="3" type="checkbox"><label for="c3">lt3</label>
             </fieldset>
 
             <fieldset>
                 <legend>Radios</legend>
-                <label for=""><input type="radio"></label>
-                <label for=""><input type="radio"></label>
-                <label for=""><input type="radio"></label>
+                <input name="rdo" id="r1" value="1" type="radio"/><label for="r1" >Label Text</label>
+                <input name="rdo" id="r2" value="2" type="radio"><label for="r2">Lt2</label>
+                <input name="rdo" id="r3" value="3" type="radio"><label for="r3">lt3</label>
             </fieldset>
 
             <fieldset>
-                <select name="selectA" id="selectA">
-                    <option value="">aardvark</option>
-                    <option value="">bluegill</option>
-                    <option value="">cephalopod</option>
-                </select>
+                <div class="custom-select quarter">
+                    <select name="selectA" id="selectA">
+                        <option value="">aardvark</option>
+                        <option value="">bluegill</option>
+                        <option value="">cephalopod</option>
+                    </select>
+                </div>
             </fieldset>
         </form>
 

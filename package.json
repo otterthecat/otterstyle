@@ -1,0 +1,23 @@
+{
+  "name": "Otterstyle",
+  "title": "Otter Style",
+  "description": "CSS boilerplate files",
+  "version": "0.0.1",
+  "homepage": "https://github.com:otterthecat/otterstyle",
+  "author": {
+    "name": "Otter the Cat",
+    "email": "otc@otterthecat.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/otterthecat/otterstyle.git"
+  },
+  "dependencies": {
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-csslint": "*",
+    "grunt-contrib-cssmin": "*"
+  },
+  "keywords": ["OTC", "css"]
+}

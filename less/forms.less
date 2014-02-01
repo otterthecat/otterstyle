@@ -5,15 +5,97 @@ Forms
 fieldset{
     padding: 10px;
     margin: 1.4rem 0;
+
+    input[type="text"] {
+
+        padding: 10px;
+        font-size: 1.6rem;
+        border: none;
+        .box-shadow-inset();
+    }
+
+
+    input[type="radio"] {
+
+        opacity: 0;
+
+        & + label {
+            cursor: pointer;
+        }
+
+        &:checked + label:before {
+            content: "\e13b";
+        }
+
+        & + label:before {
+            font-family: 'icomoon';
+            content: "\e13c";
+            padding-right: 15px;
+        }
+    }
+
+
+    input[type="checkbox"] {
+
+        opacity: 0;
+
+        & + label {
+            cursor: pointer;
+        }
+
+        &:checked + label:before {
+            content: "\e13a";
+        }
+
+        & + label:before {
+            font-family: 'icomoon';
+            content: "\e139";
+            padding-right: 15px;
+        }
+    }
 }
 
-input[type="radio"]:checked {
-    color: #ff0033;
-    background: #ff0033;
-}
+/* not my favorite approach to styling <select> elements, but
+   but it is a little more reliable for browsers than a cooler option mentioned
+   here: http://lea.verou.me/2011/03/custom-select-drop-downs-with-css3/
+*/
+.custom-select {
 
-input[type="text"], select{
+    height: 40px;
+    overflow: hidden;
+    padding: 5px 5px 10px;
+    border: 1px solid #ccc;
 
-    padding: 5px;
-    font-size: 1.6rem;
+    &:after {
+        font-family: @icon-font-family;
+        padding-right: 20%;
+        content: @plus-icon;
+        float: right;
+        margin: -13% -15% 0 0;
+    }
+
+    select {
+        color: @support_color_light;
+        background: transparent;
+        outline: 0;
+        width: 115%;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        -webkit-appearance: none;
+
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 @support_color_light;
+        }
+
+        option {
+            background: @support_color_light;
+            color: @support_color;
+            padding: 5px 0;
+        }
+    }
 }

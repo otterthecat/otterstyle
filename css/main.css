@@ -1,6 +1,15 @@
 /* ===========================================
 Imports
 =========================================== */
+/* ==========================================
+Font Icons
+========================================== */
+/* ==========================================
+Form Icons
+    not give "-icon" suffix because as these
+    are intended for forms, they should not
+    be used elsewhere within the site
+========================================== */
 /* ===========================================
 Colors
 =========================================== */
@@ -46,9 +55,6 @@ Feedback
   color: #c04955;
   margin: 0 0 1rem;
 }
-.error-box:before {
-  content: "\e00d";
-}
 .info-box {
   -webkit-text-shadow: 3px 3px 3px #2d1013;
   -moz-text-shadow: 3px 3px 3px #2d1013;
@@ -60,9 +66,6 @@ Feedback
   color: #49c0b4;
   margin: 0 0 1rem;
 }
-.info-box:before {
-  content: "\e00f";
-}
 .alert-box {
   -webkit-text-shadow: 3px 3px 3px #2d1013;
   -moz-text-shadow: 3px 3px 3px #2d1013;
@@ -73,9 +76,6 @@ Feedback
   border: 2px dotted #e0d395;
   color: #e0d395;
   margin: 0 0 1rem;
-}
-.alert-box:before {
-  content: "\e00e";
 }
 /* ==========================================
 Images
@@ -134,8 +134,8 @@ Typography
 ===================================== */
 @font-face {
   font-family: 'icomoon';
-  src: url('../icomoon/fonts/icomoon.eot');
-  src: url('../icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'), url('../icomoon/fonts/icomoon.woff') format('woff'), url('../icomoon/fonts/icomoon.ttf') format('truetype'), url('../icomoon/fonts/icomoon.svg#icomoon') format('svg');
+  src: url('../icomoon-free/fonts/icomoon.eot?v8xzmv');
+  src: url('../icomoon-free/fonts/icomoon.eot?#iefixv8xzmv') format('embedded-opentype'), url('../icomoon-free/fonts/icomoon.woff?v8xzmv') format('woff'), url('../icomoon-free/fonts/icomoon.ttf?v8xzmv') format('truetype'), url('../icomoon-free/fonts/icomoon.svg?v8xzmv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -173,7 +173,9 @@ a[href^="http://"]:after {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 html {
   font-size: 62.5%;
@@ -223,74 +225,134 @@ a:hover {
   text-decoration: underline;
 }
 a[href^="http://"]:after {
-  content: " \e010";
+  content: " \e15a";
 }
-/* Icons ---------------------------------- */
-.icon-html5:before {
-  content: "\e000";
-}
-.icon-css3:before {
-  content: "\e001";
-}
-.icon-chrome:before {
-  content: "\e002";
-}
-.icon-firefox:before {
-  content: "\e003";
-}
-.icon-IE:before {
-  content: "\e004";
+/* Icons ---------------------------------- *
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}*/
+.icon-safari:before {
+  content: "\e1c1";
 }
 .icon-opera:before {
-  content: "\e005";
+  content: "\e1c0";
 }
-.icon-safari:before {
-  content: "\e006";
+.icon-IE:before {
+  content: "\e1bf";
 }
-.icon-twitter:before {
-  content: "\e007";
+.icon-firefox:before {
+  content: "\e1be";
+}
+.icon-chrome:before {
+  content: "\e1bd";
+}
+.icon-css3:before {
+  content: "\e1bc";
+}
+.icon-html5:before {
+  content: "\e1ba";
+}
+.icon-file-css:before {
+  content: "\e1b9";
+}
+.icon-file-xml:before {
+  content: "\e1b8";
+}
+.icon-file-pdf:before {
+  content: "\e1b2";
+}
+.icon-libreoffice:before {
+  content: "\e1b1";
 }
 .icon-tux:before {
-  content: "\e008";
+  content: "\e195";
 }
-.icon-linkedin:before {
-  content: "\e009";
+.icon-apple:before {
+  content: "\e196";
 }
-.icon-skype:before {
-  content: "\e00a";
+.icon-windows:before {
+  content: "\e199";
+}
+.icon-android:before {
+  content: "\e198";
 }
 .icon-github:before {
-  content: "\e00b";
+  content: "\e18a";
 }
-.icon-feed:before {
-  content: "\e00c";
+.icon-twitter:before {
+  content: "\e16d";
 }
-.icon-spam:before {
-  content: "\e00d";
+.icon-skype:before {
+  content: "\e19d";
 }
-.icon-warning:before {
-  content: "\e00e";
-}
-.icon-info:before {
-  content: "\e00f";
+.icon-code:before {
+  content: "\e15c";
 }
 .icon-new-tab:before {
-  content: "\e010";
-}
-.icon-menu:before {
-  content: "\e011";
-}
-.icon-screen:before {
-  content: "\e012";
+  content: "\e15a";
 }
 .icon-mobile:before {
-  content: "\e013";
+  content: "\e054";
+}
+.icon-mobile2:before {
+  content: "\e055";
 }
 .icon-tablet:before {
-  content: "\e014";
+  content: "\e056";
 }
-.icon-mail:before {
-  content: "\e015";
+.icon-cog:before {
+  content: "\e090";
+}
+.icon-rocket:before {
+  content: "\e09f";
+}
+.icon-lab:before {
+  content: "\e0a5";
+}
+.alert-box:before,
+.icon-warning:before {
+  content: "\e0f4";
+}
+.info-box:before,
+.icon-info:before {
+  content: "\e0f7";
+}
+.error-box:before,
+.icon-spam:before {
+  content: "\e0fc";
+}
+.icon-checkbox-partial:before {
+  content: "\e13a";
+}
+.icon-checkbox-unchecked:before {
+  content: "\e139";
+}
+.icon-radio-checked:before {
+  content: "\e13b";
+}
+.icon-radio-unchecked:before {
+  content: "\e13c";
+}
+.icon-menu:before {
+  content: "\e0b8";
+}
+.icon-plus:before {
+  content: "\e102";
+}
+.icon-minus:before {
+  content: "\e101";
+}
+.icon-screen:before {
+  content: "\e052";
 }
 /* ======================================
 Layout
@@ -356,7 +418,7 @@ body {
   float: right;
 }
 .device-mode:before {
-  content: "\e013";
+  content: "\e054";
 }
 .device-mode:after:after {
   content: ".";
@@ -373,7 +435,7 @@ Media Queries
     font-size: 1.8rem;
   }
   .device-mode:before {
-    content: "\e014";
+    content: "\e056";
   }
   div,
   header,
@@ -516,7 +578,7 @@ Media Queries
     vertical-align: top;
   }
   .device-mode:before {
-    content: "\e012";
+    content: "\e052";
   }
 }
 /* =================================
@@ -526,14 +588,80 @@ fieldset {
   padding: 10px;
   margin: 1.4rem 0;
 }
-input[type="radio"]:checked {
-  color: #ff0033;
-  background: #ff0033;
-}
-input[type="text"],
-select {
-  padding: 5px;
+fieldset input[type="text"] {
+  padding: 10px;
   font-size: 1.6rem;
+  border: none;
+  -moz-box-shadow: inset 0 0 3px #000000;
+  -webkit-box-shadow: inset 0 0 3px #000000;
+  box-shadow: inset 0 0 3px #000000;
+}
+fieldset input[type="radio"] {
+  opacity: 0;
+}
+fieldset input[type="radio"] + label {
+  cursor: pointer;
+}
+fieldset input[type="radio"]:checked + label:before {
+  content: "\e13b";
+}
+fieldset input[type="radio"] + label:before {
+  font-family: 'icomoon';
+  content: "\e13c";
+  padding-right: 15px;
+}
+fieldset input[type="checkbox"] {
+  opacity: 0;
+}
+fieldset input[type="checkbox"] + label {
+  cursor: pointer;
+}
+fieldset input[type="checkbox"]:checked + label:before {
+  content: "\e13a";
+}
+fieldset input[type="checkbox"] + label:before {
+  font-family: 'icomoon';
+  content: "\e139";
+  padding-right: 15px;
+}
+/* not my favorite approach to styling <select> elements, but
+   but it is a little more reliable for browsers than a cooler option mentioned
+   here: http://lea.verou.me/2011/03/custom-select-drop-downs-with-css3/
+*/
+.custom-select {
+  height: 40px;
+  overflow: hidden;
+  padding: 5px 5px 10px;
+  border: 1px solid #ccc;
+}
+.custom-select:after {
+  font-family: 'icomoon';
+  padding-right: 20%;
+  content: "\e102";
+  float: right;
+  margin: -13% -15% 0 0;
+}
+.custom-select select {
+  color: #b2b2b2;
+  background: transparent;
+  outline: 0;
+  width: 115%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+}
+.custom-select select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #b2b2b2;
+}
+.custom-select select option {
+  background: #b2b2b2;
+  color: #323232;
+  padding: 5px 0;
 }
 /* =========================================
 Animations
