@@ -35,10 +35,17 @@ module.exports = function(grunt) {
     csslint: {
 
       options: {
-
+        /*
+            Unfortunately, we're turning off vendor prefixes here,
+            as there is an issue with the linter incorrectly flagging keyfram animations
+            May break this out in the future.
+         */
         'box-sizing': false,
         'box-model': false,
-        'adjoining-classes': false
+        'adjoining-classes': false,
+        'regex-selectors': false,
+        'unique-headings': false,
+        'vendor-prefix': false
       },
 
       src: ['css/*.css']

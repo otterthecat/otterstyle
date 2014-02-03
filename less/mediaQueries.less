@@ -8,8 +8,8 @@ Media Queries
     font-size: 1.8rem;
 }
 
-.device-mode:before {
-    content: @tablet-icon;
+.device-mode {
+    .icon_insertion(before; @tablet-icon);
 }
 
 div,header,p,article,aside,nav,footer,section,pre,
@@ -110,7 +110,7 @@ p {
         .segment(50%);
     }
 
-    .device-mode:before {
-        content: @desktop-icon;
+    .device-mode {
+        .icon_insertion(before; @desktop-icon);
     }
 }

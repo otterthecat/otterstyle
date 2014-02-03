@@ -110,3 +110,15 @@ Images
     -o-background-size: 100%;
     background-size: 100%;
 }
+
+.icon_insertion(before; @icon){
+    &:before {
+        content: @icon;
+    }
+}
+
+.icon_insertion(after; @icon){
+    &:after{
+        content: @icon;
+    }
+}
