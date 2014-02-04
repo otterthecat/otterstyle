@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         'box-model': false,
         'adjoining-classes': false,
         'regex-selectors': false,
-        'unique-headings': false,
+        /* 'unique-headings': false, */
         'vendor-prefix': false
       },
 

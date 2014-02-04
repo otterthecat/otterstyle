@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5 {
 
     display: block;
     line-height: 2rem;
+    text-transform: capitalize;
 }
 
 h1 {.font_size(3.6rem)}
@@ -70,19 +71,22 @@ a {
     }
 }
 
-/* Icons ---------------------------------- *
-[class^="icon-"], [class*=" icon-"] {
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+/* utility -------------------------------- */
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}*/
+.captialize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+
+/* Icons ---------------------------------- */
 
 .icon-safari:before {
     content: @browser-safari-icon;
