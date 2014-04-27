@@ -139,30 +139,43 @@ Typography
   font-weight: normal;
   font-style: normal;
 }
-.icon-html5,
-.icon-css3,
-.icon-chrome,
-.icon-firefox,
-.icon-IE,
-.icon-opera,
-.icon-safari,
-.icon-twitter,
-.icon-tux,
-.icon-linkedin,
-.icon-skype,
-.icon-github,
-.icon-feed,
-.icon-spam,
-.icon-warning,
-.icon-info,
-.icon-new-tab,
-.icon-menu,
-.icon-screen,
-.icon-mobile,
-.icon-tablet,
-.icon-mail,
+.icon-html5:before,
+.icon-css3:before,
+.icon-chrome:before,
+.icon-firefox:before,
+.icon-ie:before,
+.icon-osx:before,
+.icon-opera:before,
+.icon-safari:before,
+.icon-twitter:before,
+.icon-linux:before,
+.icon-linkedin:before,
+.icon-skype:before,
+.icon-github:before,
+.icon-feed:before,
+.icon-spam:before,
+.icon-warning:before,
+.icon-windows:before,
+.icon-info:before,
+.icon-new-tab:before,
+.icon-menu:before,
+.icon-screen:before,
+.icon-mobile:before,
+.icon-mobile2:before,
+.icon-file-css:before,
+.icon-file-xml:before,
+.icon-file-pdf:before,
+.icon-libreoffice:before,
+.icon-android:before,
+.icon-code:before,
+.icon-new-tab:before,
+.icon-cog:before,
+.icon-rocket:before,
+.icon-lab:before,
+.icon-tablet:before,
+.icon-mail:before,
 .error-box:before,
-.device-mode,
+.device-mode:before,
 .alert-box:before,
 .info-box:before,
 a[href^="http://"]:after {
@@ -239,13 +252,54 @@ a[href^="http://"]:after {
   text-transform: lowercase;
 }
 /* Icons ---------------------------------- */
+.iconPaddingRight,
+.icon-safari:before,
+.icon-opera:before,
+.icon-ie:before,
+.icon-firefox:before,
+.icon-chrome:before,
+.icon-css3:before,
+.icon-html5:before,
+.icon-file-css:before,
+.icon-file-xml:before,
+.icon-file-pdf:before,
+.icon-libreoffice:before,
+.icon-linux:before,
+.icon-osx:before,
+.icon-windows:before,
+.icon-android:before,
+.icon-github:before,
+.icon-twitter:before,
+.icon-skype:before,
+.icon-code:before,
+.icon-new-tab:before,
+.icon-mobile:before,
+.icon-mobile2:before,
+.icon-tablet:before,
+.icon-cog:before,
+.alert-box:before,
+.icon-warning:before,
+.info-box:before,
+.icon-info:before,
+.error-box:before,
+.icon-spam:before,
+.icon-checkbox-partial:before,
+.icon-checkbox-unchecked:before,
+.icon-radio-checked:before,
+.icon-radio-unchecked:before,
+.icon-menu:before,
+.icon-plus:before,
+.icon-minus:before,
+.icon-screen:before {
+  padding: 0 1.4rem 0 0;
+}
 .icon-safari:before {
   content: "\e1c1";
 }
 .icon-opera:before {
   content: "\e1c0";
 }
-.icon-IE:before {
+.icon-ie:before {
   content: "\e1bf";
 }
 .icon-firefox:before {
@@ -272,10 +326,10 @@ a[href^="http://"]:after {
 .icon-libreoffice:before {
   content: "\e1b1";
 }
-.icon-tux:before {
+.icon-linux:before {
   content: "\e195";
 }
-.icon-apple:before {
+.icon-osx:before {
   content: "\e196";
 }
 .icon-windows:before {
@@ -677,6 +731,7 @@ Animations
   }
 }
 @-o-keyframes rise {
+  
 }
 @-moz-keyframes rise {
   from {
@@ -715,6 +770,7 @@ Animations
   }
 }
 @-o-keyframes drop {
+  
 }
 @-moz-keyframes drop {
   from {
@@ -751,6 +807,7 @@ Animations
   }
 }
 @-o-keyframes rotate360 {
+  
 }
 @-moz-keyframes rotate360 {
   from {
