@@ -45,33 +45,33 @@ Box
 Feedback
 ========================================== */
 .error-box {
-  -webkit-text-shadow: 3px 3px 3px #2d1013;
-  -moz-text-shadow: 3px 3px 3px #2d1013;
-  -ms-text-shadow: 3px 3px 3px #2d1013;
-  -o-text-shadow: 3px 3px 3px #2d1013;
-  text-shadow: 3px 3px 3px #2d1013;
-  background: #531d22;
-  border: 2px dotted #c04955;
-  color: #c04955;
+  -webkit-text-shadow: 3px 3px 3px #000000;
+  -moz-text-shadow: 3px 3px 3px #000000;
+  -ms-text-shadow: 3px 3px 3px #000000;
+  -o-text-shadow: 3px 3px 3px #000000;
+  text-shadow: 3px 3px 3px #000000;
+  background: #c0216b;
+  border: 2px dotted #ec8eba;
+  color: #ec8eba;
   margin: 0 0 1rem;
 }
 .info-box {
-  -webkit-text-shadow: 3px 3px 3px #2d1013;
-  -moz-text-shadow: 3px 3px 3px #2d1013;
-  -ms-text-shadow: 3px 3px 3px #2d1013;
-  -o-text-shadow: 3px 3px 3px #2d1013;
-  text-shadow: 3px 3px 3px #2d1013;
-  background: #1d534e;
-  border: 2px dotted #49c0b4;
-  color: #49c0b4;
+  -webkit-text-shadow: 3px 3px 3px #000000;
+  -moz-text-shadow: 3px 3px 3px #000000;
+  -ms-text-shadow: 3px 3px 3px #000000;
+  -o-text-shadow: 3px 3px 3px #000000;
+  text-shadow: 3px 3px 3px #000000;
+  background: #154e56;
+  border: 2px dotted #36bbce;
+  color: #36bbce;
   margin: 0 0 1rem;
 }
 .alert-box {
-  -webkit-text-shadow: 3px 3px 3px #2d1013;
-  -moz-text-shadow: 3px 3px 3px #2d1013;
-  -ms-text-shadow: 3px 3px 3px #2d1013;
-  -o-text-shadow: 3px 3px 3px #2d1013;
-  text-shadow: 3px 3px 3px #2d1013;
+  -webkit-text-shadow: 3px 3px 3px #000000;
+  -moz-text-shadow: 3px 3px 3px #000000;
+  -ms-text-shadow: 3px 3px 3px #000000;
+  -o-text-shadow: 3px 3px 3px #000000;
+  text-shadow: 3px 3px 3px #000000;
   background: #aa9632;
   border: 2px dotted #e0d395;
   color: #e0d395;
@@ -232,7 +232,7 @@ h6 {
   line-height: 2.6rem;
 }
 a {
-  color: #2a7971;
+  color: #dd3784;
   text-decoration: none;
 }
 a:hover {
@@ -840,6 +840,6 @@ body {
 }
 header,
 footer {
-  background: #792a32;
-  color: #2a7971;
+  background: #36bbce;
+  color: #1f737f;
 }
