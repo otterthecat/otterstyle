@@ -193,9 +193,11 @@ a {
 }
 .icon-rocket:before {
     content: @rocket-icon;
+    &:extend(.iconPaddingRight);
 }
 .icon-lab:before {
     content: @beaker-icon;
+    &:extend(.iconPaddingRight);
 }
 .alert-box:before,
 .icon-warning:before {
