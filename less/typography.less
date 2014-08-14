@@ -231,7 +231,9 @@ a {
     &:extend(.iconPaddingRight);
 }
 .icon-menu:before {
-    content: @mobile-menu-icon;
+    /* using !important is a lazy fix and should be
+        removed when a better solution is thought of */
+    content: @mobile-menu-icon !important;
     &:extend(.iconPaddingRight);
 }
 .icon-plus:before {

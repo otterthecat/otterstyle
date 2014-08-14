@@ -104,6 +104,7 @@ ul,
 ol,
 li,
 iframe,
+input,
 button,
 img,
 h1,
@@ -398,7 +399,9 @@ a[href^="http://"]:after {
   content: "\e13c";
 }
 .icon-menu:before {
-  content: "\e0b8";
+  /* using !important is a lazy fix and should be
+        removed when a better solution is thought of */
+  content: "\e0b8" !important;
 }
 .icon-plus:before {
   content: "\e102";
@@ -640,45 +643,58 @@ Media Queries
 Forms
 ================================== */
 fieldset {
-  padding: 10px;
+  padding: 1rem;
   margin: 1.4rem 0;
   border: 1px dotted;
 }
-fieldset input[type="text"] {
-  padding: 10px;
+input[type="text"] {
+  padding: 1rem;
   font-size: 1.6rem;
+  line-height: 1.9rem;
   border: none;
-  -moz-box-shadow: inset 0 0 3px #000000;
-  -webkit-box-shadow: inset 0 0 3px #000000;
-  box-shadow: inset 0 0 3px #000000;
 }
-fieldset input[type="radio"] {
+input[type="radio"] {
   opacity: 0;
 }
-fieldset input[type="radio"] + label {
+input[type="radio"] + label {
   cursor: pointer;
 }
-fieldset input[type="radio"]:checked + label:before {
+input[type="radio"]:checked + label:before {
   content: "\e13b";
 }
-fieldset input[type="radio"] + label:before {
+input[type="radio"] + label:before {
   font-family: 'icomoon';
   content: "\e13c";
   padding-right: 15px;
 }
-fieldset input[type="checkbox"] {
+input[type="checkbox"] {
   opacity: 0;
 }
-fieldset input[type="checkbox"] + label {
+input[type="checkbox"] + label {
   cursor: pointer;
 }
-fieldset input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked + label:before {
   content: "\e13a";
 }
-fieldset input[type="checkbox"] + label:before {
+input[type="checkbox"] + label:before {
   font-family: 'icomoon';
   content: "\e139";
   padding-right: 15px;
+}
+/* firefox fix */
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+button {
+  -webkit-appearance: button;
+  background-image: none;
+  border: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  cursor: pointer;
+  overflow: visible;
 }
 /* not my favorite approach to styling <select> elements, but
    but it is a little more reliable for browsers than a cooler option mentioned
