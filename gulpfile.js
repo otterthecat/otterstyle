@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 
 var jade = require('gulp-jade');
+var less = require('gulp-less');
 
 
-var less = ['./less/main.less'];
+var styles = ['./less/main.less'];
 var markup = ['./templates/*.jade'];
 
 gulp.task('jade', function(){
@@ -13,4 +14,11 @@ gulp.task('jade', function(){
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('default', ['jade']);
+gulp.task('less', function(){
+
+	gulp.src(styles)
+		.pipe(less())
+		.pipe(gulp.dest('./css/'));
+});
+
+gulp.task('default', ['jade', 'less']);
