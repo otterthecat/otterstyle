@@ -19,6 +19,15 @@ Text
 /* ==========================================
 Box
 =========================================== */
+.padded {
+  padding: 1rem 1rem 1rem 1rem;
+}
+.padded-horizontal {
+  padding: 0 1rem 0 1rem;
+}
+padded-vertical {
+  padding: 1rem 0 1rem 0;
+}
 .img-left {
   float: left;
   margin: .2rem 1rem 0 0;
@@ -53,6 +62,7 @@ Feedback
   background: #c0216b;
   border: 2px dotted #ec8eba;
   color: #ec8eba;
+  padding: 1rem 1rem 1rem 1rem;
   margin: 0 0 1rem;
 }
 .info-box {
@@ -64,6 +74,7 @@ Feedback
   background: #154e56;
   border: 2px dotted #36bbce;
   color: #36bbce;
+  padding: 1rem 1rem 1rem 1rem;
   margin: 0 0 1rem;
 }
 .alert-box {
@@ -75,6 +86,7 @@ Feedback
   background: #aa9632;
   border: 2px dotted #e0d395;
   color: #e0d395;
+  padding: 1rem 1rem 1rem 1rem;
   margin: 0 0 1rem;
 }
 /* ==========================================
@@ -119,14 +131,15 @@ h6 {
   word-wrap: break-word;
   margin: 0;
   clear: both;
-  padding: 0 0;
+  /*
+    padding: @vert @horiz;
+    */
 }
-header,
-footer,
-p,
-div {
-  padding: 1rem;
+/*
+header,footer, p, div {
+    padding: @padding_default;
 }
+*/
 img {
   max-width: 100%;
 }
@@ -514,7 +527,9 @@ Media Queries
     word-wrap: break-word;
     margin: 0;
     clear: both;
-    padding: 1rem 1rem;
+    /*
+    padding: @vert @horiz;
+    */
   }
   p {
     padding: 1rem 0;
@@ -603,7 +618,9 @@ Media Queries
     word-wrap: break-word;
     margin: 0;
     clear: both;
-    padding: 1rem 1rem;
+    /*
+    padding: @vert @horiz;
+    */
   }
   .quarter {
     width: 25%;
@@ -695,6 +712,7 @@ button {
   line-height: 1.9rem;
   cursor: pointer;
   overflow: visible;
+  padding: 1rem 1rem 1rem 1rem;
 }
 /* not my favorite approach to styling <select> elements, but
    but it is a little more reliable for browsers than a cooler option mentioned
@@ -860,4 +878,5 @@ header,
 footer {
   background: #36bbce;
   color: #1f737f;
+  padding: 1rem 1rem 1rem 1rem;
 }
