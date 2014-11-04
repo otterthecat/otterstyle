@@ -861,3 +861,107 @@ footer {
   background: #36bbce;
   color: #1f737f;
 }
+.quarter,
+.third,
+.half,
+.three-quarters,
+.two-thirds {
+  /*
+	& .quarter:nth-child(odd),
+	& .third:nth-child(odd),
+	& .half:nth-child(odd),
+	& .three-quarters:nth-child(odd),
+	& .two-thirds:nth-child(odd) {
+		padding: 0 1rem 2rem 0;
+	}
+
+	& .quarter:nth-child(even),
+	& .third:nth-child(even),
+	& .half:nth-child(even),
+	& .three-quarters:nth-child(even),
+	& .two-thirds:nth-child(even) {
+		padding: 0 0 2rem 1rem;
+	}
+	*/
+}
+.quarter .quarter,
+.third .quarter,
+.half .quarter,
+.three-quarters .quarter,
+.two-thirds .quarter,
+.quarter .third,
+.third .third,
+.half .third,
+.three-quarters .third,
+.two-thirds .third,
+.quarter .half,
+.third .half,
+.half .half,
+.three-quarters .half,
+.two-thirds .half,
+.quarter .three-quarters,
+.third .three-quarters,
+.half .three-quarters,
+.three-quarters .three-quarters,
+.two-thirds .three-quarters,
+.quarter .two-thirds,
+.third .two-thirds,
+.half .two-thirds,
+.three-quarters .two-thirds,
+.two-thirds .two-thirds {
+  padding: 0 1rem 2rem;
+}
+.quarter .quarter:last-child,
+.third .quarter:last-child,
+.half .quarter:last-child,
+.three-quarters .quarter:last-child,
+.two-thirds .quarter:last-child,
+.quarter .third:last-child,
+.third .third:last-child,
+.half .third:last-child,
+.three-quarters .third:last-child,
+.two-thirds .third:last-child,
+.quarter .half:last-child,
+.third .half:last-child,
+.half .half:last-child,
+.three-quarters .half:last-child,
+.two-thirds .half:last-child,
+.quarter .three-quarters:last-child,
+.third .three-quarters:last-child,
+.half .three-quarters:last-child,
+.three-quarters .three-quarters:last-child,
+.two-thirds .three-quarters:last-child,
+.quarter .two-thirds:last-child,
+.third .two-thirds:last-child,
+.half .two-thirds:last-child,
+.three-quarters .two-thirds:last-child,
+.two-thirds .two-thirds:last-child {
+  padding: 0 0 2rem 1rem;
+}
+.quarter .quarter:first-of-type,
+.third .quarter:first-of-type,
+.half .quarter:first-of-type,
+.three-quarters .quarter:first-of-type,
+.two-thirds .quarter:first-of-type,
+.quarter .third:first-of-type,
+.third .third:first-of-type,
+.half .third:first-of-type,
+.three-quarters .third:first-of-type,
+.two-thirds .third:first-of-type,
+.quarter .half:first-of-type,
+.third .half:first-of-type,
+.half .half:first-of-type,
+.three-quarters .half:first-of-type,
+.two-thirds .half:first-of-type,
+.quarter .three-quarters:first-of-type,
+.third .three-quarters:first-of-type,
+.half .three-quarters:first-of-type,
+.three-quarters .three-quarters:first-of-type,
+.two-thirds .three-quarters:first-of-type,
+.quarter .two-thirds:first-of-type,
+.third .two-thirds:first-of-type,
+.half .two-thirds:first-of-type,
+.three-quarters .two-thirds:first-of-type,
+.two-thirds .two-thirds:first-of-type {
+  padding: 0 1rem 2rem 0;
+}
