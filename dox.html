@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+
+            .code-details {
+                list-style-type: none;
+            }
+
+            .code-details strong{
+                background-color: #36bbce;
+                color: #323232;
+                padding: 0 0.5rem;
+            }
+
+            pre {
+                background-color: #222;
+                padding: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header class='padded'>
+            <h1>App Doc</h1>
+        </header>
+        <nav class="quarter padded">
+            <h3>menu</h3>
+        </nav><div class="three-quarters">
+            <div class="half padded">
+                <h3>documentation</h3>
+                <ul class="code-details">
+                    <li>
+                        <strong>param:</strong>
+                        <em>string</em>
+                        param description
+                    </li>
+                    <li>
+                        <strong>return:</strong>
+                        <em>string</em>
+                        return description
+                    </li>
+                </ul>
+                <p>
+                    <strong>Description</strong>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio voluptate.
+                </p>
+            </div><div class="half padded">
+                <code>
+                    <pre>
+var foo = 'bar';
+var baz = function (){
+    console.log(foo);
+};
+var foo = 'bar';
+var baz = function (){
+    console.log(foo);
+};
+var foo = 'bar';
+var baz = function (){
+    console.log(foo);
+};
+                    </pre>
+                </code>
+            </div>
+            <div class="half padded">
+                <h3>documentation</h3>
+                <p>this code does stuff</p>
+            </div><div class="half padded">
+                <code>
+                    <pre>
+var foo = 'bar';
+var baz = function (){
+    console.log(foo);
+};
+                    </pre>
+                </code>
+            </div>
+    </body>
+</html>
